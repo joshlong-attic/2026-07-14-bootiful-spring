@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.example.service.grpc";
+
+message GreetingResponse  {
+  string message = 1;
+}
+
+message GreetingRequest  {
+  string name = 1 ;
+}
+
+service Greetings  {
+  rpc hello (GreetingRequest) returns (GreetingResponse){}
+}
